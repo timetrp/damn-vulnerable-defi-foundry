@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 10 17:36:41 2022
+# Make data base, printed on Sun Jul 10 19:32:42 2022
 
 # Variables
 
@@ -245,7 +243,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 80573
+VSCODE_PID = 94099
 # variable set hash-table stats:
 # Load=117/1024=11%, Rehash=0, Collisions=18/142=13%
 
@@ -255,9 +253,9 @@ VSCODE_PID = 80573
 
 # Directories
 
-# . (device 66306, inode 98697663): 22 files, no impossibilities.
+# . (device 66306, inode 98697663): 25 files, no impossibilities.
 
-# 22 files, no impossibilities in 1 directories.
+# 25 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -300,7 +298,6 @@ makefile:
 #  File has been updated.
 #  Successfully updated.
 
- 
 PuppetV2:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -387,12 +384,15 @@ NaiveReceiver:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 40 / storage = 397 B / avg = 9 B
-# current buf: size = 8162 B / used = 397 B / count = 40 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 43 / storage = 420 B / avg = 9 B
+# current buf: size = 8162 B / used = 420 B / count = 43 / avg = 9 B
 
-# strcache performance: lookups = 57 / hit rate = 29%
+# strcache performance: lookups = 60 / hit rate = 28%
 # hash-table stats:
-# Load=40/8192=0%, Rehash=0, Collisions=1/57=2%
-# Finished Make data base on Sun Jul 10 17:36:41 2022
+ 
+make: *** No rule to make target 'all'.  Stop.
+
+# Load=43/8192=1%, Rehash=0, Collisions=1/60=2%
+# Finished Make data base on Sun Jul 10 19:32:42 2022
 
  
